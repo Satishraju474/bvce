@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Members - BVC ECE Department</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* Faculty Grid */
+        .faculty-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .faculty-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Faculty Image - Smooth Corners and Shadow */
+        .faculty-card img {
+            width: 100%;
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: cover; /* Ensure images are square and cropped properly */
+            margin: 20px auto 10px;
+            border-radius: 15px; /* Smooth corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow */
+            border: 2px solid #e0e0e0;
+            display: block;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .faculty-card img:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        .faculty-card h3 {
+            margin: 10px 0;
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        .faculty-card p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .faculty-container {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .faculty-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Our Faculty Members</h1>
+    </header>
+
+    <!-- Faculty Members Grid -->
+    <div class="faculty-container">
+        <!-- Faculty Member 1 -->
+        <div class="faculty-card">
+            <img src="assets\praveen sir.png" alt="Faculty 1">
+            <h3>Dr.Akula pravin</h3>
+            <p>Professor & vice principle,M.Tech.,Ph.D.</p>
+        </div>
+
+        <!-- Faculty Member 2 -->
+        <div class="faculty-card">
+            <img src="assets\saran hod ece.jpg" alt="Faculty 2">
+            <h3>Dr.Thoram Saran Kumar</h3>
+            <p>Professor & HOD of ECE Department,M.Tech.,Ph.D.</p>
+        </div>
+
+        <!-- Faculty Member 3 -->
+        <div class="faculty-card">
+            <img src="assets\rajashekar sir.png" alt="Faculty 3">
+            <h3>Dr.Kusuma Raja Sekhar</h3>
+            <p>Professor,M.Tech.,Ph.D.</p>
+        </div>
+
+        <!-- Faculty Member 4 -->
+        <div class="faculty-card">
+            <img src="assets\dhanaraj sir.jpg" alt="Faculty 4">
+            <h3>Dr.Valluri Dhanaraj</h3>
+            <p>Professor,M.Tech.,Ph.D.</p>
+        </div>
+
+        <!-- Faculty Member 5 -->
+        <div class="faculty-card">
+            <img src="assets\sharma sir.jpg" alt="Faculty 5">
+            <h3>Dr.Kompella Bhaskara Srinivasa Sarma</h3>
+            <p>Professor,M.Tech.,Ph.D.</p>
+        </div>
+
+        <!-- Faculty Member 6 -->
+        <div class="faculty-card">
+            <img src="assets\raju sir.jpg" alt="Faculty 6">
+            <h3>Dr.Namburi Satya Nagendra Lakshmipathiraju</h3>
+            <p>Professor,M.Tech.,Ph.D.</p>
+        </div>
+
+        <!-- Faculty Member 7 -->
+        <div class="faculty-card">
+            <img src="assets\nomith mam.jpg" alt="Faculty 7">
+            <h3>Dr.Mandem Nomitha Reddy</h3>
+            <p>Asst Professor,Ph.D.</p>
+        </div>
+
+        <!-- Faculty Member 8 -->
+        <div class="faculty-card">
+            <img src="assets\harika mam.jpg" alt="Faculty 8">
+            <h3>Ms.Pangam Harika</h3>
+            <p>Associate Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 9 -->
+        <div class="faculty-card">
+            <img src="assets\sridevimam.jpg" alt="Faculty 9">
+            <h3>Ms.Chavakula Sridevi</h3>
+            <p>Associate Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 10 -->
+        <div class="faculty-card">
+            <img src="assets\sandhya mam.jpg" alt="Faculty 10">
+            <h3>Mrs.Vallabhareddi Sandhya</h3>
+            <p>Associate Professor,M.Tech.</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\satyavinodh.jpg" alt="Faculty 3">
+            <h3>Mr.Yegireddy Satya Vinod</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 4 -->
+        <div class="faculty-card">
+            <img src="assets\nageshwarao sir.jpg" alt="Faculty 4">
+            <h3>Mr.Inukonda Rama Satya Nageswara rao</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\sukanya mam.jpg" alt="Faculty 1">
+            <h3>Ms.Gosangi Sukanya</h3>
+            <p> Asst Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 2 -->
+        <div class="faculty-card">
+            <img src="assets\asha mam.jpg" alt="Faculty 2">
+            <h3>Ms.Gubbala Asha</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 5 -->
+        <div class="faculty-card">
+            <img src="assets\swathimam.jpg" alt="Faculty 5">
+            <h3>Ms.Kankipati Swathi</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 6 -->
+        <div class="faculty-card">
+            <img src="assets\anusha mam.jpg" alt="Faculty 6">
+            <h3>Ms.Seelam Lakshmi Anusha</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 7 -->
+        <div class="faculty-card">
+            <img src="assets\bhargavi mam.jpg" alt="Faculty 7">
+            <h3>Ms.Seelam Naga Bharghavi</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 8 -->
+        <div class="faculty-card">
+            <img src="assets\gourimam.jpg" alt="Faculty 8">
+            <h3>Mrs.Chikkam Surya Ramagouri</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 9 -->
+        <div class="faculty-card">
+            <img src="assets\sivaranjani mam.jpg" alt="Faculty 9">
+            <h3>Ms.Kanakala Sivaranjani</h3>
+            <p>Asst Professor.M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 10 -->
+        <div class="faculty-card">
+            <img src="assets\licamam.jpg" alt="Faculty 10">
+            <h3>Mrs.Nimmana Lakshmipriyanka</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\klp priyanka mam.jpg" alt="Faculty 9">
+            <h3>Mr.Samsani Naga Venkata Durga Priyanka</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <!-- Faculty Member 10 -->
+        <div class="faculty-card">
+            <img src="assets\lella mam.jpg" alt="Faculty 10">
+            <h3>Ms.Sabbathi Leelaveni Veni</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\sudheersir.jpg" alt="Faculty 10">
+            <h3>Mr.Gidla Sudheer Babu</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\rajesh paul.jpg" alt="Faculty 10">
+            <h3>Mr.Gidla Sudheer Babu</h3>
+            <p>Asst Professor,M.Tech.</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\murthu sir.jpg" alt="Faculty 10">
+            <h3>mr.Murthy</h3>
+            <p>Lab Incharge</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\sreenu.jpg" alt="Faculty 10">
+            <h3>Mr.P.Srinu</h3>
+            <p>Lab Incharge</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\santhosh sir.jpg" alt="Faculty 10">
+            <h3>Mr.K.Santhosh</h3>
+            <p>Lab Incharge</p>
+        </div>
+
+        <div class="faculty-card">
+            <img src="assets\srinivas sir.jpg" alt="Faculty 10">
+            <h3>Mr.P.Srinivas</h3>
+            <p>Lab Incharge</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BVC ECE Department. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
