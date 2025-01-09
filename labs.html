@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our College Labs</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* Section Styles */
+        .lab-section {
+            padding: 40px 20px;
+            background: white;
+            margin: 20px auto;
+            max-width: 1100px;
+            border-radius: 8px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .lab-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+
+        /* Gallery Container */
+        .lab-gallery {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-x: auto; /* Enable horizontal scrolling */
+            scroll-behavior: smooth; /* Smooth scrolling */
+            width: 100%;
+            padding-bottom: 10px; /* Add bottom padding for better appearance */
+            border-radius: 8px;
+            gap: 20px; /* Add space between images */
+        }
+
+        .lab-gallery img {
+            width: 220px; /* Fixed width for images */
+            height: 160px; /* Fixed height for images */
+            object-fit: cover; /* Maintain aspect ratio */
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .lab-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .lab-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .lab-gallery {
+                flex-direction: row; /* Keep images in a row */
+                gap: 15px;
+                max-width: 100%;
+            }
+
+            .lab-gallery img {
+                width: 90%; /* Adjust image width on smaller screens */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .lab-section h2 {
+                font-size: 1.4rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.4rem;
+            }
+
+            .lab-section h2 {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Our Department Labs</h1>
+    </header>
+
+    <!-- Lab 1 -->
+    <div class="lab-section" id="lab1">
+        <h2>COMMUNICATION LAB</h2>
+        <div class="lab-gallery">
+            <img src="assets/communication lab/pht1.jpg" alt="Electronics Lab Image 1">
+            <img src="assets\communication lab\PHT5.jpg" alt="Electronics Lab Image 1">
+            <img src="assets/communication lab/pht3.jpg" alt="Electronics Lab Image 3">
+            <img src="assets/communication lab/pht4.jpg" alt="Electronics Lab Image 4">
+            <img src="assets/communication lab/pht1.jpg" alt="Electronics Lab Image 1">
+            <img src="assets/communication lab/pht3.jpg" alt="Electronics Lab Image 3">
+            <img src="assets/communication lab/pht4.jpg" alt="Electronics Lab Image 4">
+            <img src="assets\communication lab\PHT5.jpg" alt="Electronics Lab Image 1">
+        </div>
+    </div>
+
+    <!-- Lab 2 -->
+    <div class="lab-section" id="lab2">
+        <h2>IC APPLICATIONS LAB</h2>
+        <div class="lab-gallery">
+            <img src="assets\IC APPLICATIONS LAB\PHT1.jpg" alt="Computer Lab Image 1">
+            <img src="assets\IC APPLICATIONS LAB\PHT2.jpg" alt="Computer Lab Image 2">
+            <img src="assets\IC APPLICATIONS LAB\PHT3.jpg" alt="Computer Lab Image 3">
+            <img src="assets\IC APPLICATIONS LAB\PHT1.jpg" alt="Computer Lab Image 1">
+            <img src="assets\IC APPLICATIONS LAB\PHT2.jpg" alt="Computer Lab Image 2">
+            <img src="assets\IC APPLICATIONS LAB\PHT3.jpg" alt="Computer Lab Image 3">
+        </div>
+    </div>
+
+    <!-- Lab 3 -->
+    <div class="lab-section" id="lab3">
+        <h2>ELECTRONIC DEVICES AND CIRCUITS LAB</h2>
+        <div class="lab-gallery">
+            <img src="assets\ELECTRONIC DEVICES AND CIRCUITS LAB\PHT1.jpg" alt="Communication Lab Image 1">
+            <img src="lab3_image2.jpg" alt="Communication Lab Image 2">
+            <img src="lab3_image3.jpg" alt="Communication Lab Image 3">
+            <img src="lab3_image4.jpg" alt="Communication Lab Image 4">
+        </div>
+    </div>
+
+    <!-- Lab 4 -->
+    <div class="lab-section" id="lab4">
+        <h2>ECA / PDC LAB</h2>
+        <div class="lab-gallery">
+            <img src="assets\ECA PDC LAB\PHT1.jpg" alt="Mechanical Lab Image 1">
+            <img src="lab4_image2.jpg" alt="Mechanical Lab Image 2">
+            <img src="lab4_image3.jpg" alt="Mechanical Lab Image 3">
+            <img src="lab4_image4.jpg" alt="Mechanical Lab Image 4">
+        </div>
+    </div>
+
+    <!-- Lab 5 -->
+    <div class="lab-section" id="lab5">
+        <h2>Lab 5: Physics Lab</h2>
+        <div class="lab-gallery">
+            <img src="lab5_image1.jpg" alt="Physics Lab Image 1">
+            <img src="lab5_image2.jpg" alt="Physics Lab Image 2">
+            <img src="lab5_image3.jpg" alt="Physics Lab Image 3">
+            <img src="lab5_image4.jpg" alt="Physics Lab Image 4">
+        </div>
+    </div>
+    
+    <div class="lab-section" id="lab5">
+        <h2>Lab 5: Physics Lab</h2>
+        <div class="lab-gallery">
+            <img src="lab5_image1.jpg" alt="Physics Lab Image 1">
+            <img src="lab5_image2.jpg" alt="Physics Lab Image 2">
+            <img src="lab5_image3.jpg" alt="Physics Lab Image 3">
+            <img src="lab5_image4.jpg" alt="Physics Lab Image 4">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; @2024 bvceece department. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

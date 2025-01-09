@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> BVC ENGINEERING COLLEGE </title>
+    <title>BVC ENGINEERING COLLEGE</title>
     <style>
         /* General Styles */
         body {
@@ -12,6 +12,7 @@
             padding: 0;
             box-sizing: border-box;
             color: #333;
+            line-height: 1.6;
         }
 
         /* Background Video */
@@ -29,7 +30,7 @@
         header {
             background: rgba(0, 0, 0, 0.85);
             color: white;
-            padding: 15px 20px;
+            padding: 10px 20px;  /* Reduced padding */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -39,28 +40,36 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
+        header h2 {
+            font-size: 1rem; /* Adjusted font size */
             font-weight: 700;
+            margin: 0;
+        }
+
+        .logo {
+            height: 80px; /* Reduced logo size */
+            width: auto;
+            margin-right: 15px; /* Reduced margin */
         }
 
         nav {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 500;
-            padding: 8px 12px;
+            padding: 10px 15px;  /* Reduced padding */
             border-radius: 5px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;  /* Reduced font size */
         }
 
         nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: #4CAF50;
+            color: #fff;
         }
 
         /* Hamburger Menu */
@@ -74,7 +83,8 @@
             background: white;
             height: 3px;
             width: 25px;
-            margin: 3px 0;
+            margin: 4px 0;
+            transition: all 0.3s ease;
         }
 
         .nav-links {
@@ -85,29 +95,69 @@
         .nav-links.active {
             display: flex;
             flex-direction: column;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             position: absolute;
             top: 60px;
             right: 20px;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .nav-links a {
-            padding: 10px;
+            padding: 12px;
             text-align: center;
+            font-size: 1.1rem; /* Adjusted font size for menu items */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                right: 20px;
+                top: 70px;
+                background: rgba(0, 0, 0, 0.95);
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        .hamburger.toggle span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.toggle span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.toggle span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
         }
 
         /* Main Content */
         main {
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         section {
-            margin: 20px auto;
+            margin: 30px auto;
             max-width: 900px;
-            padding: 30px;
+            padding: 20px;
             background: white;
             border-radius: 15px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -122,22 +172,22 @@
 
         section h2 {
             color: #333;
-            margin-bottom: 10px;
-            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-size: 2rem; /* Adjusted font size */
             border-bottom: 2px solid #4CAF50;
             display: inline-block;
             padding-bottom: 5px;
         }
 
         section p {
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* Adjusted font size */
             line-height: 1.8;
             color: #555;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 20px;
             padding: 12px 25px;
             background: #4CAF50;
             color: white;
@@ -145,6 +195,7 @@
             border-radius: 25px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: background 0.3s ease, transform 0.2s ease;
+            font-size: 1rem; /* Adjusted font size for buttons */
         }
 
         .btn:hover {
@@ -157,41 +208,13 @@
             background: rgba(0, 0, 0, 0.85);
             color: white;
             text-align: center;
-            padding: 15px 0;
-            font-size: 0.9rem;
+            padding: 20px 0;
+            font-size: 1rem; /* Adjusted font size */
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
         }
 
         footer p {
             margin: 0;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                gap: 10px;
-                position: absolute;
-                right: 20px;
-                top: 60px;
-                background: rgba(0, 0, 0, 0.9);
-                border-radius: 5px;
-                padding: 10px;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            section {
-                max-width: 100%;
-                padding: 20px;
-            }
         }
     </style>
 </head>
@@ -205,103 +228,114 @@
 
     <!-- Header -->
     <header>
-        <h2>BVCE ECE DEPARTMENT (ODALAREVU)</h2>
+        <img src="assets\clglogo.jpg" alt="BVCE Logo" class="logo">
+        <h2>BONAM VENKATA CHALAMAYYA ENGINEERING COLLEGE (ODALAREVU)</h2>
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
         <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#results">Results</a>
-            <a href="#notes">Study Materials</a>
-            <a href="#Faculty">Faculty</a>
-            <a href="#placements">Our Placements</a>
-            <a href="#college view">Our college view</a>
-            <a href="#Reconnect with the ECE Family">Reconnect with the ECE Family</a>
-            <a href="#Queries or Suggestions">Queries or Suggestions</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#home" onclick="closeMenu()">Home</a>
+            <a href="#vision and mission" onclick="closeMenu()">Vision and Mission</a>
+            <a href="#Faculty" onclick="closeMenu()">Faculty</a>
+            <a href="#Labs" onclick="closeMenu()">Our Labs</a>
+            <a href="#Study Materials" onclick="closeMenu()">Study Materials</a>
+            <a href="#results" onclick="closeMenu()">Results</a>
+            <a href="#placements" onclick="closeMenu()">Placements</a>
+            <a href="#college view" onclick="closeMenu()">College View</a>
+            <a href="#contact" onclick="closeMenu()">Contact Us</a>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Home Section -->
         <section id="home">
-            <h2>Welcome To Our ECE Department </h2>
-            <p>Unlock a world of resources and essential tools tailored for our students and staff. Immerse yourself in the dynamic spirit of our vibrant Department community!</p>
+            <h2>Welcome To Our ECE Department</h2>
+            <p>Unlock a world of resources and essential tools tailored for our students and staff. Immerse yourself in the dynamic spirit of our vibrant Department community!</p>
         </section>
 
-        <!-- Results Section -->
-        <section id="results">
-            <h2>Results</h2>
-            <p>Effortlessly access your academic results and stay informed about your progress every step of the way!</p>
-            <a href="resultswebpage.html" class="btn">View Results</a>
+        <section id="vision and mission">
+            <h2>Our Vision</h2>
+            <p>To become a leading technical institute of academic excellence by importing high patterns of discipline through innovative programs of global standards making our students technologically superior and ethically strong to serve the Nation.</p>
+            <h2>Our Mission</h2>
+            <p>To create an environment that shall foster the growth of intelectually capable,innovative professionals who can contribute to the growth of Technology in partnership with industry and develop and harness it for the welfare of the Nation and mankind.</p>
         </section>
 
-        <!-- Notes Section -->
-        <section id="notes">
+        <section id="Faculty">
+            <h2>Faculty</h2>
+            <p>Discover our exceptional faculty—visionary mentors who inspire and empower our students to achieve greatness!</p>
+            <a href="lecturerswebpage.html" class="btn">View Faculty</a>
+        </section>
+
+        <section id="Labs">
+            <h2>Our Labs</h2>
+            <p>Our labs are equipped to foster innovation, creativity, and practical knowledge in various fields of study. Visit our Labs page to learn more about the resources and opportunities available for students to experiment, collaborate, and develop their skills.</p>
+            <a href="labs.html" class="btn">View Labs</a>
+        </section>
+
+        <section id="Study Materials">
             <h2>Study Materials</h2>
-            <p>Unlock a goldmine of lecture notes, assignments, and study guides—your gateway to effortless learning starts here!</p>
+            <p>Unlock a goldmine of lecture notes, assignments, and study guides—your gateway to effortless learning starts here!</p>
             <a href="noteswebpage.html" class="btn">Explore Study Materials</a>
         </section>
 
-        <!-- Lecturers Section -->
-        <section id="Faculty">
-            <h2>Faculty</h2>
-            <p>Discover our exceptional faculty—visionary mentors who inspire and empower our students to achieve greatness!</p>
-            <a href="lecturerswebpage.html" class="btn">View Faculty</a>
+        <section id="results">
+            <h2>Results</h2>
+            <p>Effortlessly access your academic results and stay informed about your progress every step of the way!</p>
+            <a href="resultswebpage.html" class="btn">View Results</a>
         </section>
 
         <section id="placements">
             <h2>Our Placements</h2>
-            <p>Our college is committed to empowering students and shaping their future with unparalleled placement opportunities!</p>
+            <p>Our college is committed to empowering students and shaping their future with unparalleled placement opportunities!</p>
             <a href="https://bvcec.edu.in/placements/" class="btn">View Placements</a>
         </section>
 
         <section id="college view">
-            <h2>Our college view</h2>
-            <p>Take a 360-degree virtual tour of our college and experience campus life like never before!</p>
-            <a href="https://maps.app.goo.gl/F33VZ6vgbwCXtuwA7" class="btn">click here</a>
-        </section>
-
-        <section id="Our Activities">
-            <h2>Our satish</h2>
-            <p></p>
-            <a href="https://maps.app.goo.gl/F33VZ6vgbwCXtuwA7" class="btn">click here</a>
+            <h2>Our College View</h2>
+            <p>Take a 360-degree virtual tour of our college and experience campus life like never before!</p>
+            <a href="https://maps.app.goo.gl/F33VZ6vgbwCXtuwA7" class="btn">Click Here</a>
         </section>
 
         <section id="Reconnect with the ECE Family">
             <h2>Reconnect with the ECE Family</h2>
             <p>Reconnect, reminisce, and reignite your bond with the ECE family! Join us to celebrate your legacy and shape the future together!</p>
-            <a href="https://forms.gle/HUoFbqawnsUuWTdt7" class="btn">click here</a>
+            <a href="https://forms.gle/HUoFbqawnsUuWTdt7" class="btn">Click Here</a>
         </section>
 
         <section id="Queries or Suggestions">
             <h2>Queries or Suggestions</h2>
-            <p>Have questions or suggestions for our ECE department? Share your thoughts with us here—we’re eager to hear from you!</p>
-            <a href="https://forms.gle/nGuLP69UNuJA4nwWA" class="btn">Ask here</a>
+            <p>Have questions or suggestions for our ECE department? Share your thoughts with us here—we’re eager to hear from you!</p>
+            <a href="https://forms.gle/nGuLP69UNuJA4nwWA" class="btn">Ask Here</a>
         </section>
 
-        <!-- Contact Us Section -->
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>Got questions? We’re just a message or call away! Let us assist you.
-                📧 Email: bvceece@gmail.com | 📞 Phone: +91-8985962899</p>
+            <p>Got questions? We’re just a message or call away! Let us assist you. 📧 Email: bvceece@gmail.com | 📞 Phone: +91-8985962899</p>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 bvce ece department. All rights reserved. Designed by 2K22-26 Batch Students.</p>
+        <p>&copy; 2024 BVCE ECE Department. All rights reserved. Designed by 2K22-26 Batch Students.</p>
     </footer>
 
     <script>
         function toggleMenu() {
             const nav = document.querySelector('.nav-links');
             nav.classList.toggle('active');
+            const hamburger = document.querySelector('.hamburger');
+            hamburger.classList.toggle('toggle');
+        }
+
+        function closeMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.remove('active');
+            const hamburger = document.querySelector('.hamburger');
+            hamburger.classList.remove('toggle');
         }
     </script>
+
 </body>
 </html>
-
